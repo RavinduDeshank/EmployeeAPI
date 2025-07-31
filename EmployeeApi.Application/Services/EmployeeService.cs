@@ -10,18 +10,18 @@ namespace EmployeeApi.Application.Services
 {
     public class EmployeeService
     {
-        private readonly IEmployeeRepository _repo;
+        private readonly IEmployeeRepository _employeeRepository;
 
-        public EmployeeService(IEmployeeRepository repo) => _repo = repo;
+        public EmployeeService(IEmployeeRepository employeeRepository) => _employeeRepository = employeeRepository;
 
-        public IEnumerable<Employee> GetAllEmployees() => _repo.GetAllEmployees();
+        public IEnumerable<Employee> GetAllEmployees() => _employeeRepository.GetAllEmployees();
 
-        public Employee? GetEmployeeById(int id) => _repo.GetEmployeeById(id);
+        public Employee? GetEmployeeById(int id) => _employeeRepository.GetEmployeeById(id);
 
-        public bool AddEmployee(Employee emp) => _repo.AddEmployee(emp);
+        public bool AddEmployee(Employee emp) => _employeeRepository.AddEmployee(emp);
 
-        public bool UpdateEmployee(Employee emp) => _repo.UpdateEmployee(emp);
+        public bool UpdateEmployee(Employee emp) => _employeeRepository.UpdateEmployee(emp);
 
-        public bool DeleteEmployee(int id) => _repo.DeleteEmployee(id);
+        public bool DeleteEmployee(int id) => _employeeRepository.DeleteEmployee(id);
     }
 }

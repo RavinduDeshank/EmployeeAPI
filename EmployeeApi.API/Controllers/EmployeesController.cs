@@ -19,7 +19,7 @@ namespace EmployeeApi.API.Controllers
             var employeeList = _service.GetAllEmployees();
             if(employeeList == null || !employeeList.Any())
             {
-                return NotFound("Employee not found.");
+                return NotFound("Employees were not found.");
             }
             return Ok(employeeList);
         }
